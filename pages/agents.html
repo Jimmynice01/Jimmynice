@@ -1,0 +1,1961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Agent Details | Crownstone Properties</title>
+
+    <meta name="description"
+          content="Meet our real estate professional at Crownstone Properties and explore their property listings, expertise and contact information.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <style>
+        /* =====================================================
+           AGENT DETAILS PAGE
+        ===================================================== */
+
+        .agent-page {
+            background: var(--off-white);
+        }
+
+        .agent-container {
+            width: min(1180px, 92%);
+            margin: 0 auto;
+        }
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .agent-hero {
+            position: relative;
+            padding: 75px 0;
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.62),
+                    rgba(0, 0, 0, 0.62)
+                ),
+                url("../images/agent/agent-hero.webp") center/cover no-repeat;
+            color: var(--white);
+        }
+
+        .agent-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 35px;
+            font-size: 13px;
+            color: rgba(255,255,255,.8);
+        }
+
+        .agent-breadcrumb a {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .agent-breadcrumb i {
+            font-size: 10px;
+        }
+
+        .agent-hero-grid {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .agent-main-photo {
+            width: 260px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 14px;
+            border: 5px solid rgba(255,255,255,.9);
+            box-shadow: var(--shadow);
+        }
+
+        .agent-hero-content .eyebrow {
+            display: inline-block;
+            margin-bottom: 10px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+        }
+
+        .agent-hero-content h1 {
+            margin: 0 0 8px;
+            font-family: var(--font-heading);
+            font-size: clamp(36px, 5vw, 58px);
+            line-height: 1.1;
+        }
+
+        .agent-role {
+            display: block;
+            margin-bottom: 18px;
+            color: rgba(255,255,255,.85);
+            font-size: 16px;
+        }
+
+        .agent-location {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 25px;
+            color: rgba(255,255,255,.85);
+        }
+
+        .agent-location i {
+            color: var(--accent);
+        }
+
+        .agent-hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .agent-hero-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 13px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .agent-hero-btn.primary {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        .agent-hero-btn.primary:hover {
+            transform: translateY(-2px);
+        }
+
+        .agent-hero-btn.secondary {
+            border: 1px solid rgba(255,255,255,.7);
+            color: var(--white);
+        }
+
+        .agent-hero-btn.secondary:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        /* =====================================================
+           STATS
+        ===================================================== */
+
+        .agent-stats {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .agent-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .agent-stat {
+            padding: 30px 20px;
+            text-align: center;
+            border-right: 1px solid var(--border);
+        }
+
+        .agent-stat:last-child {
+            border-right: 0;
+        }
+
+        .agent-stat strong {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--primary);
+            font-family: var(--font-heading);
+            font-size: 30px;
+        }
+
+        .agent-stat span {
+            color: var(--light-text);
+            font-size: 13px;
+        }
+
+        /* =====================================================
+           MAIN CONTENT
+        ===================================================== */
+
+        .agent-content-section {
+            padding: 80px 0;
+        }
+
+        .agent-content-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 350px;
+            gap: 45px;
+            align-items: start;
+        }
+
+        .agent-main-content {
+            min-width: 0;
+        }
+
+        .agent-card {
+            padding: 32px;
+            margin-bottom: 25px;
+            background: var(--white);
+            border-radius: 14px;
+            box-shadow: var(--shadow);
+        }
+
+        .agent-card:last-child {
+            margin-bottom: 0;
+        }
+
+        .agent-card h2 {
+            margin: 0 0 20px;
+            font-family: var(--font-heading);
+            font-size: 27px;
+            color: var(--text);
+        }
+
+        .agent-card p {
+            margin: 0 0 16px;
+            color: var(--light-text);
+            line-height: 1.85;
+        }
+
+        .agent-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* =====================================================
+           SPECIALTIES
+        ===================================================== */
+
+        .specialties {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .specialty {
+            padding: 9px 14px;
+            border-radius: 30px;
+            background: var(--off-white);
+            color: var(--text);
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .specialty i {
+            margin-right: 6px;
+            color: var(--primary);
+        }
+
+        /* =====================================================
+           PROPERTY LISTINGS
+        ===================================================== */
+
+        .agent-listings-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 22px;
+        }
+
+        .agent-listings-header h2 {
+            margin: 0;
+        }
+
+        .view-all-properties {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .agent-properties-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .agent-property-card {
+            overflow: hidden;
+            border-radius: 12px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .agent-property-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+
+        .agent-property-image {
+            position: relative;
+            height: 210px;
+            overflow: hidden;
+        }
+
+        .agent-property-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform .4s ease;
+        }
+
+        .agent-property-card:hover .agent-property-image img {
+            transform: scale(1.04);
+        }
+
+        .property-status {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            padding: 7px 11px;
+            border-radius: 5px;
+            background: var(--primary);
+            color: var(--white);
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .property-status.rent {
+            background: var(--accent);
+            color: var(--text);
+        }
+
+        .agent-property-content {
+            padding: 20px;
+        }
+
+        .agent-property-content h3 {
+            margin: 0 0 8px;
+            font-family: var(--font-heading);
+            font-size: 19px;
+        }
+
+        .agent-property-location {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 13px;
+            color: var(--light-text);
+            font-size: 12px;
+        }
+
+        .agent-property-location i {
+            color: var(--primary);
+        }
+
+        .agent-property-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            padding-top: 13px;
+            border-top: 1px solid var(--border);
+        }
+
+        .agent-property-price {
+            color: var(--primary);
+            font-size: 17px;
+            font-weight: 700;
+        }
+
+        .agent-property-link {
+            color: var(--text);
+            font-size: 12px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .agent-property-link:hover {
+            color: var(--primary);
+        }
+
+        /* =====================================================
+           SIDEBAR
+        ===================================================== */
+
+        .agent-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        .contact-agent-card {
+            padding: 30px;
+            background: var(--white);
+            border-radius: 14px;
+            box-shadow: var(--shadow);
+            margin-bottom: 25px;
+        }
+
+        .contact-agent-card h3 {
+            margin: 0 0 20px;
+            font-family: var(--font-heading);
+            font-size: 23px;
+        }
+
+        .agent-contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .agent-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            color: var(--light-text);
+            font-size: 14px;
+        }
+
+        .agent-contact-item i {
+            width: 18px;
+            margin-top: 2px;
+            color: var(--primary);
+        }
+
+        .agent-contact-item a {
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .agent-contact-item a:hover {
+            color: var(--primary);
+        }
+
+        .contact-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .contact-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 7px;
+            padding: 12px 8px;
+            border: 1px solid var(--primary);
+            border-radius: 6px;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+            transition: var(--transition);
+        }
+
+        .contact-btn.primary {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .contact-btn:hover {
+            background: var(--primary-dark);
+            border-color: var(--primary-dark);
+            color: var(--white);
+        }
+
+        /* =====================================================
+           INQUIRY FORM
+        ===================================================== */
+
+        .agent-form-card {
+            padding: 30px;
+            background: var(--white);
+            border-radius: 14px;
+            box-shadow: var(--shadow);
+        }
+
+        .agent-form-card h3 {
+            margin: 0 0 7px;
+            font-family: var(--font-heading);
+            font-size: 23px;
+        }
+
+        .agent-form-intro {
+            margin: 0 0 22px;
+            color: var(--light-text);
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .agent-form {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            color: var(--text);
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            background: var(--white);
+            color: var(--text);
+            font-family: inherit;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary);
+        }
+
+        .form-group textarea {
+            min-height: 115px;
+            resize: vertical;
+        }
+
+        .send-message-btn {
+            border: 0;
+            padding: 14px 18px;
+            border-radius: 6px;
+            background: var(--primary);
+            color: var(--white);
+            font-family: inherit;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .send-message-btn:hover {
+            background: var(--primary-dark);
+        }
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .agent-cta {
+            padding: 75px 0;
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .agent-cta-content {
+            max-width: 760px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .agent-cta-content h2 {
+            margin: 0 0 15px;
+            font-family: var(--font-heading);
+            font-size: clamp(31px, 5vw, 45px);
+        }
+
+        .agent-cta-content p {
+            margin: 0 0 25px;
+            line-height: 1.8;
+            opacity: .9;
+        }
+
+        .agent-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 25px;
+            border-radius: 6px;
+            background: var(--white);
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+            transition: var(--transition);
+        }
+
+        .agent-cta-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 1000px) {
+
+            .agent-content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .agent-sidebar {
+                position: static;
+            }
+
+            .contact-agent-card,
+            .agent-form-card {
+                max-width: 650px;
+            }
+        }
+
+        @media (max-width: 800px) {
+
+            .agent-hero-grid {
+                grid-template-columns: 200px 1fr;
+                gap: 30px;
+            }
+
+            .agent-main-photo {
+                width: 200px;
+                height: 240px;
+            }
+
+            .agent-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .agent-stat:nth-child(2) {
+                border-right: 0;
+            }
+
+            .agent-stat:nth-child(-n+2) {
+                border-bottom: 1px solid var(--border);
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .agent-hero {
+                padding: 50px 0;
+            }
+
+            .agent-hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .agent-main-photo {
+                width: 210px;
+                height: 250px;
+                margin: 0 auto;
+            }
+
+            .agent-location {
+                justify-content: center;
+            }
+
+            .agent-hero-buttons {
+                justify-content: center;
+            }
+
+            .agent-properties-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .agent-content-section {
+                padding: 60px 0;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .agent-container {
+                width: 94%;
+            }
+
+            .agent-card,
+            .contact-agent-card,
+            .agent-form-card {
+                padding: 22px;
+            }
+
+            .agent-stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .agent-stat {
+                padding: 23px 10px;
+            }
+
+            .agent-stat strong {
+                font-size: 25px;
+            }
+
+            .agent-stat span {
+                font-size: 11px;
+            }
+
+            .agent-listings-header {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .contact-buttons {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="header">
+
+        <div class="container nav-container">
+
+            <!-- LOGO -->
+            <a href="../index.html" class="logo">
+
+                <span class="logo-icon">
+                    <img
+                        src="../images/crownstonelogo.webp"
+                        alt="Crownstone Properties Logo">
+                </span>
+
+                <span>
+                    Crownstone <span>Properties</span>
+                </span>
+
+            </a>
+
+
+            <!-- NAVIGATION -->
+            <nav class="navbar">
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="properties.html">
+                    Properties
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="agents.html" class="active">
+                    Agents
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="blog.html">
+                    Blog
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <!-- GET IN TOUCH -->
+            <a href="contact.html" class="nav-btn">
+                Get In Touch
+            </a>
+
+
+            <!-- MOBILE MENU -->
+            <button
+                class="menu-toggle"
+                aria-label="Open navigation"
+                type="button">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="agent-page">
+
+
+        <!-- =================================================
+             AGENT HERO
+        ================================================== -->
+
+        <section class="agent-hero">
+
+            <div class="agent-container">
+
+                <div class="agent-breadcrumb">
+
+                    <a href="../index.html">
+                        Home
+                    </a>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                    <a href="agents.html">
+                        Agents
+                    </a>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                    <span>
+                        Agent Details
+                    </span>
+
+                </div>
+
+
+                <div class="agent-hero-grid">
+
+                    <img
+                        src="../images/agent/agent-01.webp"
+                        alt="Crownstone Properties real estate agent"
+                        class="agent-main-photo">
+
+
+                    <div class="agent-hero-content">
+
+                        <span class="eyebrow">
+                            Crownstone Properties
+                        </span>
+
+                        <h1>
+                            Crownstone Properties
+                        </h1>
+
+                        <span class="agent-role">
+                            Senior Real Estate Consultant
+                        </span>
+
+                        <div class="agent-location">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <span>
+                                Abuja, Nigeria
+                            </span>
+
+                        </div>
+
+
+                        <div class="agent-hero-buttons">
+
+                            <!-- FUNCTIONAL PHONE CALL -->
+                            <a
+                                href="tel:+2347058184550"
+                                class="agent-hero-btn primary">
+
+                                <i class="fa-solid fa-phone"></i>
+
+                                Call Agent
+
+                            </a>
+
+
+                            <!-- WHATSAPP -->
+                            <a
+                                href="https://wa.me/2347058184550"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="agent-hero-btn secondary">
+
+                                <i class="fa-brands fa-whatsapp"></i>
+
+                                WhatsApp
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             AGENT STATS
+        ================================================== -->
+
+        <section class="agent-stats">
+
+            <div class="agent-container">
+
+                <div class="agent-stats-grid">
+
+                    <div class="agent-stat">
+                        <strong>8+</strong>
+                        <span>Years Experience</span>
+                    </div>
+
+                    <div class="agent-stat">
+                        <strong>75+</strong>
+                        <span>Properties Sold</span>
+                    </div>
+
+                    <div class="agent-stat">
+                        <strong>120+</strong>
+                        <span>Happy Clients</span>
+                    </div>
+
+                    <div class="agent-stat">
+                        <strong>5</strong>
+                        <span>Areas Covered</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CONTENT
+        ================================================== -->
+
+        <section class="agent-content-section">
+
+            <div class="agent-container">
+
+                <div class="agent-content-grid">
+
+
+                    <!-- =============================
+                         MAIN CONTENT
+                    ============================== -->
+
+                    <div class="agent-main-content">
+
+
+                        <!-- BIOGRAPHY -->
+                        <section class="agent-card">
+
+                            <h2>
+                                About Crownstone Properties
+                            </h2>
+
+                            <p>
+                                Crownstone Properties is a leading real estate
+                                consultancy firm with a focus on residential,
+                                luxury and investment properties. At Crownstone
+                                Properties, we work with buyers, sellers,
+                                landlords and investors to help them navigate
+                                the property market.
+                            </p>
+
+                            <p>
+                                Our approach is centred around understanding
+                                each client's requirements, presenting suitable
+                                opportunities and maintaining clear communication
+                                throughout the transaction.
+                            </p>
+
+                            <p>
+                                Crownstone Properties works primarily with
+                                clients looking for properties in Abuja,
+                                Nasarawa and other selected Nigerian locations.
+                            </p>
+
+                        </section>
+
+
+                        <!-- SPECIALTIES -->
+                        <section class="agent-card">
+
+                            <h2>
+                                Areas of Expertise
+                            </h2>
+
+                            <div class="specialties">
+
+                                <span class="specialty">
+                                    <i class="fa-solid fa-house"></i>
+                                    Luxury Homes
+                                </span>
+
+                                <span class="specialty">
+                                    <i class="fa-solid fa-building"></i>
+                                    Apartments
+                                </span>
+
+                                <span class="specialty">
+                                    <i class="fa-solid fa-map"></i>
+                                    Land
+                                </span>
+
+                                <span class="specialty">
+                                    <i class="fa-solid fa-chart-line"></i>
+                                    Investment
+                                </span>
+
+                                <span class="specialty">
+                                    <i class="fa-solid fa-key"></i>
+                                    Rentals
+                                </span>
+
+                                <span class="specialty">
+                                    <i class="fa-solid fa-city"></i>
+                                    Commercial Property
+                                </span>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- PROPERTY LISTINGS -->
+                        <section class="agent-card">
+
+                            <div class="agent-listings-header">
+
+                                <h2>
+                                    Current Listings
+                                </h2>
+
+                                <a
+                                    href="properties.html"
+                                    class="view-all-properties">
+
+                                    View All
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </a>
+
+                            </div>
+
+
+                            <div class="agent-properties-grid">
+
+
+                                <!-- PROPERTY 1 -->
+
+                                <article class="agent-property-card">
+
+                                    <div class="agent-property-image">
+
+                                        <img
+                                            src="../images/properties/property-03.jpeg"
+                                            alt="Modern 5 Bedroom Luxury Duplex">
+
+                                        <span class="property-status">
+                                            Sold
+                                        </span>
+
+                                    </div>
+
+
+                                    <div
+                                        class="listing-video"
+                                        style="margin-top: 30px;">
+
+                                        <h4 style="
+                                            margin: 0 0 12px 0;
+                                            color: var(--primary);
+                                            font-family: var(--font-heading);
+                                            font-size: 20px;
+                                            font-weight: 600;
+                                        ">
+                                            Video Reference
+                                        </h4>
+
+                                        <video
+                                            autoplay
+                                            muted
+                                            loop
+                                            playsinline
+                                            controls
+                                            preload="metadata"
+                                            style="
+                                                width: 100%;
+                                                height: 260px;
+                                                display: block;
+                                                object-fit: cover;
+                                            ">
+
+                                            <source
+                                                src="../images/properties/property-land-video.mp4"
+                                                type="video/mp4">
+
+                                            Your browser does not support
+                                            the video tag.
+
+                                        </video>
+
+                                    </div>
+
+
+                                    <div class="agent-property-content">
+
+                                        <h3>
+                                            Modern 5 Bedroom Luxury Duplex
+                                        </h3>
+
+                                        <div class="agent-property-location">
+
+                                            <i class="fa-solid fa-location-dot"></i>
+
+                                            <span>
+                                                Maitama, Abuja
+                                            </span>
+
+                                        </div>
+
+                                        <div class="agent-property-bottom">
+
+                                            <span class="agent-property-price">
+                                                ₦280,000,000
+                                            </span>
+
+                                            <a
+                                                href="property-details.html"
+                                                class="agent-property-link">
+
+                                                Details
+                                                <i class="fa-solid fa-arrow-right"></i>
+
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                </article>
+
+
+                                <!-- PROPERTY 2 -->
+
+                                <article class="agent-property-card">
+
+                                    <div class="agent-property-image">
+
+                                        <img
+                                            src="../images/properties/property-02.webp"
+                                            alt="Luxury 3 Bedroom Apartment">
+
+                                        <span class="property-status rent">
+                                            For Rent
+                                        </span>
+
+                                    </div>
+
+
+                                    <div
+                                        class="listing-video"
+                                        style="margin-top: 30px;">
+
+                                        <h4 style="
+                                            margin: 0 0 12px 0;
+                                            color: var(--primary);
+                                            font-family: var(--font-heading);
+                                            font-size: 20px;
+                                            font-weight: 600;
+                                        ">
+                                            Video Reference
+                                        </h4>
+
+                                        <video
+                                            autoplay
+                                            muted
+                                            loop
+                                            playsinline
+                                            controls
+                                            preload="metadata"
+                                            style="
+                                                width: 100%;
+                                                height: 260px;
+                                                display: block;
+                                                object-fit: cover;
+                                            ">
+
+                                            <source
+                                                src="../images/properties/property-land-video.mp4"
+                                                type="video/mp4">
+
+                                            Your browser does not support
+                                            the video tag.
+
+                                        </video>
+
+                                    </div>
+
+
+                                    <div class="agent-property-content">
+
+                                        <h3>
+                                            Luxury 3 Bedroom Apartment
+                                        </h3>
+
+                                        <div class="agent-property-location">
+
+                                            <i class="fa-solid fa-location-dot"></i>
+
+                                            <span>
+                                                Wuse 2, Abuja
+                                            </span>
+
+                                        </div>
+
+                                        <div class="agent-property-bottom">
+
+                                            <span class="agent-property-price">
+                                                ₦8,500,000 /yr
+                                            </span>
+
+                                            <a
+                                                href="property-details.html"
+                                                class="agent-property-link">
+
+                                                Details
+                                                <i class="fa-solid fa-arrow-right"></i>
+
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                </article>
+
+
+                                <!-- PROPERTY 3 -->
+
+                                <article class="agent-property-card">
+
+                                    <div class="agent-property-image">
+
+                                        <img
+                                            src="../images/properties/property-01.webp"
+                                            alt="Contemporary 4 Bedroom Residence">
+
+                                        <span class="property-status">
+                                            For Sale
+                                        </span>
+
+                                    </div>
+
+
+                                    <div
+                                        class="listing-video"
+                                        style="margin-top: 30px;">
+
+                                        <h4 style="
+                                            margin: 0 0 12px 0;
+                                            color: var(--primary);
+                                            font-family: var(--font-heading);
+                                            font-size: 20px;
+                                            font-weight: 600;
+                                        ">
+                                            Video Reference
+                                        </h4>
+
+                                        <video
+                                            autoplay
+                                            muted
+                                            loop
+                                            playsinline
+                                            controls
+                                            preload="metadata"
+                                            style="
+                                                width: 100%;
+                                                height: 260px;
+                                                display: block;
+                                                object-fit: cover;
+                                            ">
+
+                                            <source
+                                                src="../images/properties/property-land-video.mp4"
+                                                type="video/mp4">
+
+                                            Your browser does not support
+                                            the video tag.
+
+                                        </video>
+
+                                    </div>
+
+
+                                    <div class="agent-property-content">
+
+                                        <h3>
+                                            Contemporary 4 Bedroom Residence
+                                        </h3>
+
+                                        <div class="agent-property-location">
+
+                                            <i class="fa-solid fa-location-dot"></i>
+
+                                            <span>
+                                                Lekki Phase 1, Lagos
+                                            </span>
+
+                                        </div>
+
+                                        <div class="agent-property-bottom">
+
+                                            <span class="agent-property-price">
+                                                ₦450,000,000
+                                            </span>
+
+                                            <a
+                                                href="property-details.html"
+                                                class="agent-property-link">
+
+                                                Details
+                                                <i class="fa-solid fa-arrow-right"></i>
+
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                </article>
+
+
+                                <!-- PROPERTY 4 -->
+
+                                <article class="agent-property-card">
+
+                                    <div class="agent-property-image">
+
+                                        <img
+                                            src="../images/properties/property-04.webp"
+                                            alt="Premium 3 Bedroom City Apartment">
+
+                                        <span class="property-status">
+                                            For Sale
+                                        </span>
+
+                                    </div>
+
+
+                                    <div
+                                        class="listing-video"
+                                        style="margin-top: 30px;">
+
+                                        <h4 style="
+                                            margin: 0 0 12px 0;
+                                            color: var(--primary);
+                                            font-family: var(--font-heading);
+                                            font-size: 20px;
+                                            font-weight: 600;
+                                        ">
+                                            Video Reference
+                                        </h4>
+
+                                        <video
+                                            autoplay
+                                            muted
+                                            loop
+                                            playsinline
+                                            controls
+                                            preload="metadata"
+                                            style="
+                                                width: 100%;
+                                                height: 260px;
+                                                display: block;
+                                                object-fit: cover;
+                                            ">
+
+                                            <source
+                                                src="../images/properties/property-land-video.mp4"
+                                                type="video/mp4">
+
+                                            Your browser does not support
+                                            the video tag.
+
+                                        </video>
+
+                                    </div>
+
+
+                                    <div class="agent-property-content">
+
+                                        <h3>
+                                            Premium 3 Bedroom City Apartment
+                                        </h3>
+
+                                        <div class="agent-property-location">
+
+                                            <i class="fa-solid fa-location-dot"></i>
+
+                                            <span>
+                                                Victoria Island, Lagos
+                                            </span>
+
+                                        </div>
+
+                                        <div class="agent-property-bottom">
+
+                                            <span class="agent-property-price">
+                                                ₦95,000,000
+                                            </span>
+
+                                            <a
+                                                href="property-details.html"
+                                                class="agent-property-link">
+
+                                                Details
+                                                <i class="fa-solid fa-arrow-right"></i>
+
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                </article>
+
+                            </div>
+
+                        </section>
+
+                    </div>
+
+
+                    <!-- =============================
+                         SIDEBAR
+                    ============================== -->
+
+                    <aside class="agent-sidebar">
+
+
+                        <!-- CONTACT AGENT -->
+
+                        <div class="contact-agent-card">
+
+                            <h3>
+                                Contact Agent
+                            </h3>
+
+
+                            <div class="agent-contact-list">
+
+                                <div class="agent-contact-item">
+
+                                    <i class="fa-solid fa-phone"></i>
+
+                                    <!-- FUNCTIONAL PHONE LINK -->
+                                    <a href="tel:+2347058184550">
+                                        +234 705 818 4550
+                                    </a>
+
+                                </div>
+
+
+                                <div class="agent-contact-item">
+
+                                    <i class="fa-solid fa-envelope"></i>
+
+                                    <a href="mailto:hello@crownstoneproperties.com">
+                                        hello@crownstoneproperties.com
+                                    </a>
+
+                                </div>
+
+
+                                <div class="agent-contact-item">
+
+                                    <i class="fa-solid fa-location-dot"></i>
+
+                                    <span>
+                                        Abuja, Nigeria
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="contact-buttons">
+
+                                <!-- FUNCTIONAL CALL BUTTON -->
+                                <a
+                                    href="tel:+2347058184550"
+                                    class="contact-btn primary">
+
+                                    <i class="fa-solid fa-phone"></i>
+
+                                    Call
+
+                                </a>
+
+
+                                <!-- WHATSAPP BUTTON -->
+                                <a
+                                    href="https://wa.me/2347058184550"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="contact-btn">
+
+                                    <i class="fa-brands fa-whatsapp"></i>
+
+                                    WhatsApp
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- INQUIRY FORM -->
+
+                        <div class="agent-form-card">
+
+                            <h3>
+                                Send a Message
+                            </h3>
+
+                            <p class="agent-form-intro">
+                                Tell us what type of property you're
+                                looking for and we'll get back to you.
+                            </p>
+
+
+                            <form
+                                class="agent-form"
+                                id="agentInquiryForm">
+
+                                <div class="form-group">
+
+                                    <label for="agentName">
+                                        Full Name
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="agentName"
+                                        name="name"
+                                        placeholder="Your full name"
+                                        required>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="agentEmail">
+                                        Email Address
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        id="agentEmail"
+                                        name="email"
+                                        placeholder="you@example.com"
+                                        required>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="agentPhone">
+                                        Phone Number
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        id="agentPhone"
+                                        name="phone"
+                                        placeholder="+234..."
+                                        required>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="agentMessage">
+                                        Message
+                                    </label>
+
+                                    <textarea
+                                        id="agentMessage"
+                                        name="message"
+                                        placeholder="Tell us what you're looking for..."
+                                        required></textarea>
+
+                                </div>
+
+
+                                <button
+                                    type="submit"
+                                    class="send-message-btn">
+
+                                    <i class="fa-solid fa-paper-plane"></i>
+
+                                    Send Message
+
+                                </button>
+
+                            </form>
+
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CTA
+        ================================================== -->
+
+        <section class="agent-cta">
+
+            <div class="agent-container">
+
+                <div class="agent-cta-content">
+
+                    <h2>
+                        Looking for the Right Property?
+                    </h2>
+
+                    <p>
+                        Browse our property collection or contact
+                        Crownstone Properties for assistance finding
+                        a property that fits your requirements.
+                    </p>
+
+                    <a
+                        href="properties.html"
+                        class="agent-cta-btn">
+
+                        <i class="fa-solid fa-building"></i>
+
+                        Browse Properties
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+
+            <!-- FOOTER BRAND -->
+
+            <div class="footer-brand">
+
+                <a
+                    href="../index.html"
+                    class="logo footer-logo">
+
+                    <span class="logo-icon">
+
+                        <img
+                            src="../images/crownstonelogo.webp"
+                            alt="Crownstone Properties Logo">
+
+                    </span>
+
+                    <span>
+                        Crownstone <span>Properties</span>
+                    </span>
+
+                </a>
+
+
+                <p>
+                    Your trusted partner for buying, selling, renting
+                    and investing in real estate.
+                </p>
+
+
+                <div class="social-links">
+
+                    <a
+                        href="https://www.facebook.com/share/18xpwoxYc4/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+
+                    <a
+                        href="https://www.instagram.com/crow_nstoneproperties/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        aria-label="Twitter">
+
+                        <i class="fa-brands fa-x-twitter"></i>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        aria-label="LinkedIn">
+
+                        <i class="fa-brands fa-linkedin-in"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="properties.html">
+                    Properties
+                </a>
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <!-- PROPERTY TYPES -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Property Types
+                </h3>
+
+                <a href="properties.html?type=house">
+                    Houses
+                </a>
+
+                <a href="properties.html?type=apartment">
+                    Apartments
+                </a>
+
+                <a href="properties.html?type=land">
+                    Land
+                </a>
+
+                <a href="properties.html?type=commercial">
+                    Commercial
+                </a>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Abuja, Nigeria
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+
+                    <a
+                        href="tel:+2347058184550"
+                        style="color: inherit; text-decoration: none;">
+
+                        +234 705 818 4550
+
+                    </a>
+
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    hello@crownstoneproperties.com
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+                    &copy; 2026 Crownstone Properties.
+                    All Rights Reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="../js/main.js"></script>
+
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const form =
+                document.getElementById("agentInquiryForm");
+
+            if (!form) {
+                return;
+            }
+
+
+            form.addEventListener("submit", function (event) {
+
+                event.preventDefault();
+
+
+                const name =
+                    document
+                        .getElementById("agentName")
+                        .value
+                        .trim();
+
+
+                const email =
+                    document
+                        .getElementById("agentEmail")
+                        .value
+                        .trim();
+
+
+                const phone =
+                    document
+                        .getElementById("agentPhone")
+                        .value
+                        .trim();
+
+
+                const message =
+                    document
+                        .getElementById("agentMessage")
+                        .value
+                        .trim();
+
+
+                const whatsappMessage =
+`Hello Crownstone Properties,
+
+My name is ${name}.
+
+I would like to speak with Crownstone Properties about a property.
+
+Email: ${email}
+Phone: ${phone}
+
+Message:
+${message}`;
+
+
+                const whatsappUrl =
+                    "https://wa.me/2347058184550?text=" +
+                    encodeURIComponent(whatsappMessage);
+
+
+                window.open(
+                    whatsappUrl,
+                    "_blank"
+                );
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>

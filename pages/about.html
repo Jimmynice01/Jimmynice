@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | Crownstone Properties</title>
+
+    <meta name="description"
+          content="Learn more about Crownstone Properties, our mission, values and commitment to helping clients find exceptional real estate opportunities in Nigeria.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <style>
+        /* =====================================================
+           ABOUT PAGE
+        ===================================================== */
+
+        .about-page {
+            background: var(--off-white);
+        }
+
+        /* Page Hero */
+        .about-hero {
+            min-height: 430px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.55),
+                    rgba(0, 0, 0, 0.55)
+                ),
+                url("../images/about/about-hero.jpg") center/cover no-repeat;
+        }
+
+        .about-hero-content {
+            width: min(1180px, 92%);
+            margin: 0 auto;
+            color: var(--white);
+        }
+
+        .about-hero-content .eyebrow {
+            display: inline-block;
+            margin-bottom: 12px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .about-hero-content h1 {
+            max-width: 750px;
+            margin: 0 0 18px;
+            font-family: var(--font-heading);
+            font-size: clamp(38px, 6vw, 64px);
+            line-height: 1.1;
+        }
+
+        .about-hero-content p {
+            max-width: 650px;
+            margin: 0;
+            font-size: 17px;
+            line-height: 1.8;
+            opacity: 0.92;
+        }
+
+        /* Intro */
+        .about-intro {
+            padding: 90px 0;
+        }
+
+        .about-container {
+            width: min(1180px, 92%);
+            margin: 0 auto;
+        }
+
+        .about-intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-image-wrapper {
+            position: relative;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 560px;
+            object-fit: cover;
+            border-radius: 14px;
+            display: block;
+        }
+
+        .about-image-badge {
+            position: absolute;
+            right: -25px;
+            bottom: 35px;
+            width: 180px;
+            padding: 25px;
+            border-radius: 12px;
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .about-image-badge strong {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 38px;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .about-image-badge span {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+
+        .section-eyebrow {
+            display: inline-block;
+            margin-bottom: 10px;
+            color: var(--primary);
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .about-intro-content h2 {
+            margin: 0 0 20px;
+            font-family: var(--font-heading);
+            font-size: clamp(32px, 4vw, 48px);
+            line-height: 1.2;
+            color: var(--text);
+        }
+
+        .about-intro-content p {
+            margin: 0 0 18px;
+            color: var(--light-text);
+            line-height: 1.85;
+        }
+
+        .about-signature {
+            margin-top: 28px;
+            padding-top: 22px;
+            border-top: 1px solid var(--border);
+        }
+
+        .about-signature strong {
+            display: block;
+            color: var(--text);
+            font-family: var(--font-heading);
+            font-size: 20px;
+        }
+
+        .about-signature span {
+            display: block;
+            margin-top: 4px;
+            color: var(--light-text);
+            font-size: 13px;
+        }
+
+        /* Stats */
+        .about-stats {
+            padding: 65px 0;
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 15px;
+        }
+
+        .stat-item i {
+            display: block;
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+
+        .stat-item strong {
+            display: block;
+            margin-bottom: 5px;
+            font-family: var(--font-heading);
+            font-size: 38px;
+        }
+
+        .stat-item span {
+            font-size: 14px;
+            opacity: 0.85;
+        }
+
+        /* Mission & Vision */
+        .mission-section {
+            padding: 90px 0;
+        }
+
+        .section-heading {
+            max-width: 700px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+
+        .section-heading h2 {
+            margin: 0 0 15px;
+            font-family: var(--font-heading);
+            font-size: clamp(32px, 4vw, 46px);
+            color: var(--text);
+        }
+
+        .section-heading p {
+            margin: 0;
+            color: var(--light-text);
+            line-height: 1.8;
+        }
+
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .mission-card {
+            padding: 40px;
+            background: var(--white);
+            border-radius: 14px;
+            box-shadow: var(--shadow);
+        }
+
+        .mission-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 22px;
+            border-radius: 10px;
+            background: var(--off-white);
+            color: var(--primary);
+            font-size: 23px;
+        }
+
+        .mission-card h3 {
+            margin: 0 0 12px;
+            font-family: var(--font-heading);
+            font-size: 25px;
+        }
+
+        .mission-card p {
+            margin: 0;
+            color: var(--light-text);
+            line-height: 1.8;
+        }
+
+        /* Values */
+        .values-section {
+            padding: 90px 0;
+            background: var(--white);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .value-card {
+            padding: 35px 30px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            transition: var(--transition);
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .value-number {
+            display: inline-block;
+            margin-bottom: 18px;
+            color: var(--primary);
+            font-family: var(--font-heading);
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .value-card h3 {
+            margin: 0 0 12px;
+            font-family: var(--font-heading);
+            font-size: 23px;
+        }
+
+        .value-card p {
+            margin: 0;
+            color: var(--light-text);
+            line-height: 1.75;
+        }
+
+        /* Services */
+        .services-section {
+            padding: 90px 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .service-card {
+            padding: 32px 25px;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .service-card i {
+            margin-bottom: 18px;
+            color: var(--primary);
+            font-size: 28px;
+        }
+
+        .service-card h3 {
+            margin: 0 0 10px;
+            font-family: var(--font-heading);
+            font-size: 20px;
+        }
+
+        .service-card p {
+            margin: 0;
+            color: var(--light-text);
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        /* CTA */
+        .about-cta {
+            padding: 90px 0;
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.65),
+                    rgba(0, 0, 0, 0.65)
+                ),
+                url("../images/about/about-cta.jpg") center/cover no-repeat;
+        }
+
+        .about-cta-content {
+            max-width: 750px;
+            margin: 0 auto;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .about-cta-content h2 {
+            margin: 0 0 15px;
+            font-family: var(--font-heading);
+            font-size: clamp(32px, 5vw, 48px);
+        }
+
+        .about-cta-content p {
+            margin: 0 auto 28px;
+            max-width: 620px;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        .about-cta-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .about-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: var(--transition);
+        }
+
+        .about-cta-btn.primary {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        .about-cta-btn.primary:hover {
+            transform: translateY(-2px);
+        }
+
+        .about-cta-btn.secondary {
+            border: 1px solid rgba(255,255,255,0.7);
+            color: var(--white);
+        }
+
+        .about-cta-btn.secondary:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        /* Responsive */
+        @media (max-width: 1000px) {
+            .about-intro-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .about-image {
+                height: 480px;
+            }
+
+            .about-image-badge {
+                right: 20px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 750px) {
+            .about-hero {
+                min-height: 370px;
+            }
+
+            .about-intro,
+            .mission-section,
+            .values-section,
+            .services-section,
+            .about-cta {
+                padding: 65px 0;
+            }
+
+            .mission-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .about-container {
+                width: 94%;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+
+            .stat-item strong {
+                font-size: 30px;
+            }
+
+            .stat-item span {
+                font-size: 12px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .mission-card,
+            .value-card {
+                padding: 27px 22px;
+            }
+
+            .about-image {
+                height: 330px;
+            }
+
+            .about-image-badge {
+                position: relative;
+                right: auto;
+                bottom: auto;
+                width: 100%;
+                margin-top: 15px;
+            }
+
+            .about-cta-buttons {
+                flex-direction: column;
+            }
+
+            .about-cta-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+    <header class="header">
+    <div class="container nav-container">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">
+                <img src="../images/crownstonelogo.webp" alt="Crownstone Properties Logo">
+            </span>
+            <span>Crownstone<span> Properties</span>
+        </a>
+
+        <nav class="navbar">
+            <a href="../index.html">Home</a>
+            <a href="properties.html">Properties</a>
+            <a href="services.html">Services</a>
+            <a href="agents.html">Agents</a>
+            <a href="about.html" class="active">About</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <a href="pages/contact.html" class="nav-btn">
+            Get In Touch
+        </a>
+
+        <button class="menu-toggle" aria-label="Open navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+</header>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+    <main class="about-page">
+
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+        <section class="about-hero">
+
+            <div class="about-hero-content">
+
+                <span class="eyebrow">
+                    About Crownstone Properties
+                </span>
+
+                <h1>
+                    Building Trust Through Exceptional Real Estate
+                </h1>
+
+                <p>
+                    We connect people with properties that match their
+                    ambitions, lifestyles and long-term goals.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             INTRODUCTION
+        ================================================== -->
+        <section class="about-intro">
+
+            <div class="about-container">
+
+                <div class="about-intro-grid">
+
+                    <div class="about-image-wrapper">
+
+                        <img 
+                            src="/realestate-website/images/team.webp"
+                            alt="Crownstone Properties team"
+                            class="about-image">
+
+                        <div class="about-image-badge">
+
+                            <strong>10+</strong>
+
+                            <span>
+                                Years of Combined Experience
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="about-intro-content">
+
+                        <span class="section-eyebrow">
+                            Who We Are
+                        </span>
+
+                        <h2>
+                            Your Trusted Partner in Property
+                        </h2>
+
+                        <p>
+                            Crownstone Properties is a modern real estate
+                            company focused on helping individuals,
+                            families, investors and businesses discover
+                            valuable property opportunities.
+                        </p>
+
+                        <p>
+                            From luxury homes and contemporary apartments
+                            to land and commercial properties, we provide
+                            carefully selected real estate options across
+                            Nigeria.
+                        </p>
+
+                        <p>
+                            Our approach is built around transparency,
+                            professional service and a clear understanding
+                            of what each client needs.
+                        </p>
+
+                        <div class="about-signature">
+
+                            <strong>
+                                Crownstone Properties
+                            </strong>
+
+                            <span>
+                                Real Estate. Refined.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             STATS
+        ================================================== -->
+        <section class="about-stats">
+
+            <div class="about-container">
+
+                <div class="stats-grid">
+
+                    <div class="stat-item">
+
+                        <i class="fa-solid fa-house"></i>
+
+                        <strong>100+</strong>
+
+                        <span>
+                            Properties Listed
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat-item">
+
+                        <i class="fa-solid fa-users"></i>
+
+                        <strong>250+</strong>
+
+                        <span>
+                            Clients Served
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat-item">
+
+                        <i class="fa-solid fa-handshake"></i>
+
+                        <strong>150+</strong>
+
+                        <span>
+                            Successful Transactions
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat-item">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <strong>5+</strong>
+
+                        <span>
+                            Major Cities
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             MISSION & VISION
+        ================================================== -->
+        <section class="mission-section">
+
+            <div class="about-container">
+
+                <div class="section-heading">
+
+                    <span class="section-eyebrow">
+                        What Drives Us
+                    </span>
+
+                    <h2>
+                        Our Mission & Vision
+                    </h2>
+
+                    <p>
+                        We are committed to creating a straightforward,
+                        professional and rewarding property experience
+                        for every client.
+                    </p>
+
+                </div>
+
+
+                <div class="mission-grid">
+
+                    <article class="mission-card">
+
+                        <div class="mission-icon">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+
+                        <h3>
+                            Our Mission
+                        </h3>
+
+                        <p>
+                            To simplify the real estate journey by
+                            connecting clients with quality properties,
+                            reliable information and professional guidance
+                            from discovery through completion.
+                        </p>
+
+                    </article>
+
+
+                    <article class="mission-card">
+
+                        <div class="mission-icon">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+
+                        <h3>
+                            Our Vision
+                        </h3>
+
+                        <p>
+                            To become a trusted real estate brand known
+                            for exceptional service, carefully selected
+                            properties and lasting relationships with
+                            clients and partners.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             VALUES
+        ================================================== -->
+        <section class="values-section">
+
+            <div class="about-container">
+
+                <div class="section-heading">
+
+                    <span class="section-eyebrow">
+                        Our Principles
+                    </span>
+
+                    <h2>
+                        What We Stand For
+                    </h2>
+
+                    <p>
+                        Every client relationship and property transaction
+                        is guided by a simple set of principles.
+                    </p>
+
+                </div>
+
+
+                <div class="values-grid">
+
+                    <article class="value-card">
+
+                        <span class="value-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Integrity
+                        </h3>
+
+                        <p>
+                            We believe in honest communication, transparent
+                            dealings and keeping our clients informed
+                            throughout the property journey.
+                        </p>
+
+                    </article>
+
+
+                    <article class="value-card">
+
+                        <span class="value-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Excellence
+                        </h3>
+
+                        <p>
+                            We strive to deliver a professional experience
+                            and carefully present opportunities that meet
+                            high standards.
+                        </p>
+
+                    </article>
+
+
+                    <article class="value-card">
+
+                        <span class="value-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Client First
+                        </h3>
+
+                        <p>
+                            Every client has different priorities. We take
+                            time to understand those priorities and provide
+                            solutions around them.
+                        </p>
+
+                    </article>
+
+
+                    <article class="value-card">
+
+                        <span class="value-number">
+                            04
+                        </span>
+
+                        <h3>
+                            Professionalism
+                        </h3>
+
+                        <p>
+                            From property presentation to communication,
+                            we maintain a professional approach at every
+                            stage.
+                        </p>
+
+                    </article>
+
+
+                    <article class="value-card">
+
+                        <span class="value-number">
+                            05
+                        </span>
+
+                        <h3>
+                            Relationships
+                        </h3>
+
+                        <p>
+                            We focus on building relationships that continue
+                            beyond a single property transaction.
+                        </p>
+
+                    </article>
+
+
+                    <article class="value-card">
+
+                        <span class="value-number">
+                            06
+                        </span>
+
+                        <h3>
+                            Local Knowledge
+                        </h3>
+
+                        <p>
+                            We understand that location matters and aim to
+                            provide useful insight into the areas where our
+                            properties are located.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SERVICES
+        ================================================== -->
+        <section class="services-section">
+
+            <div class="about-container">
+
+                <div class="section-heading">
+
+                    <span class="section-eyebrow">
+                        What We Do
+                    </span>
+
+                    <h2>
+                        Our Real Estate Services
+                    </h2>
+
+                    <p>
+                        Whether you're buying, selling, renting or investing,
+                        our services are designed to make the process easier.
+                    </p>
+
+                </div>
+
+
+                <div class="services-grid">
+
+                    <article class="service-card">
+
+                        <i class="fa-solid fa-house"></i>
+
+                        <h3>
+                            Property Sales
+                        </h3>
+
+                        <p>
+                            Discover residential and luxury properties
+                            selected for homeowners and investors.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <i class="fa-solid fa-key"></i>
+
+                        <h3>
+                            Property Rentals
+                        </h3>
+
+                        <p>
+                            Find comfortable apartments, houses and
+                            commercial spaces available for rent.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <i class="fa-solid fa-map"></i>
+
+                        <h3>
+                            Land & Development
+                        </h3>
+
+                        <p>
+                            Explore land opportunities suitable for
+                            residential and commercial development.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        <h3>
+                            Property Investment
+                        </h3>
+
+                        <p>
+                            Get assistance exploring property opportunities
+                            aligned with your investment objectives.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CTA
+        ================================================== -->
+        <section class="about-cta">
+
+            <div class="about-container">
+
+                <div class="about-cta-content">
+
+                    <h2>
+                        Ready to Find Your Next Property?
+                    </h2>
+
+                    <p>
+                        Explore our available properties or speak with
+                        Crownstone Properties about what you're looking for.
+                    </p>
+
+
+                    <div class="about-cta-buttons">
+
+                        <a
+                            href="properties.html"
+                            class="about-cta-btn primary">
+
+                            <i class="fa-solid fa-building"></i>
+
+                            Explore Properties
+
+                        </a>
+
+
+                        <a
+                            href="contact.html"
+                            class="about-cta-btn secondary">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            Contact Us
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+   <!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+        <div class="footer-brand">
+
+            <a href="index.html" class="logo footer-logo">
+                <span class="logo-icon">
+                    <img src="../images/crownstonelogo.webp" alt="Crownstone Properties Logo">
+                </span>
+                <span>Crownstone<span>  Properties</span></span>
+            </a>
+
+            <p>
+                Your trusted partner for buying, selling, renting
+                and investing in real estate.
+            </p>
+
+            <div class="social-links">
+                <a href="https://www.facebook.com/share/18xpwoxYc4/" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="https://www.instagram.com/crow_nstoneproperties/" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" aria-label="Twitter">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="pages/properties.html">Properties</a>
+            <a href="pages/about.html">About Us</a>
+            <a href="pages/services.html">Services</a>
+            <a href="pages/contact.html">Contact</a>
+        </div>
+
+
+        <div class="footer-column">
+            <h3>Property Types</h3>
+            <a href="pages/properties.html?type=house">Houses</a>
+            <a href="pages/properties.html?type=apartment">Apartments</a>
+            <a href="pages/properties.html?type=land">Land</a>
+            <a href="pages/properties.html?type=commercial">Commercial</a>
+        </div>
+
+
+        <div class="footer-column">
+            <h3>Contact</h3>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Abuja, Nigeria
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +234 705 818 4550
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                hello@crownstone.com
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+        <div class="container">
+            <p>
+                &copy; 2026 Crownstone. All Rights Reserved.
+            </p>
+        </div>
+    </div>
+
+</footer>
+
+
+    <!-- Main JavaScript -->
+    <script src="../js/main.js"></script>
+
+</body>
+</html>
+

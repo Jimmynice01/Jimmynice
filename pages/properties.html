@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Properties | Crownstone Properties</title>
+    <meta name="description" content="Browse verified houses, apartments, land and commercial properties available through Crownstone.">
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/property.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+    <div class="container nav-container">
+
+        <a href="../index.html" class="logo">
+    <span class="logo-icon">
+        <img src="../images/crownstonelogo.webp" alt="Crownstone Properties Logo">
+    </span>
+
+    <span>
+        Crownstone <span>Properties</span>
+    </span>
+</a>
+
+
+        <nav class="navbar">
+
+            <a href="../index.html">Home</a>
+
+            <a href="properties.html" class="active">
+                Properties
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="agents.html">
+                Agents
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="blog.html">
+                Blog
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <a href="contact.html" class="nav-btn">
+            Get In Touch
+        </a>
+
+
+        <button class="menu-toggle" aria-label="Open navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     PAGE HERO
+===================================================== -->
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <span class="section-label">
+            FIND YOUR NEXT PROPERTY
+        </span>
+
+        <h1>Explore Our Properties</h1>
+
+        <p>
+            Discover homes, apartments, land and commercial
+            properties in some of Nigeria's most desirable locations
+            Like Abuja, Lagos, Port Harcourt, Ibadan and Kano. 
+            Browse our listings to find your ideal property.
+        </p>
+
+        <div class="breadcrumb">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+            <span>Properties</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROPERTY SEARCH
+===================================================== -->
+
+<section class="property-search-section">
+
+    <div class="container">
+
+        <div class="advanced-search">
+
+            <div class="search-title">
+
+                <div>
+                    <span class="section-label">
+                        SEARCH PROPERTIES
+                    </span>
+
+                    <h2>Find Your Ideal Property</h2>
+                </div>
+
+                <button class="filter-toggle">
+                    <i class="fa-solid fa-sliders"></i>
+                    Filters
+                </button>
+
+            </div>
+
+
+            <form class="property-filter-form" id="propertyFilterForm">
+
+
+                <!-- Property Type -->
+
+                <div class="filter-field">
+
+                    <label for="propertyType">
+                        Property Type
+                    </label>
+
+                    <div class="select-wrapper">
+
+                        <i class="fa-solid fa-house"></i>
+
+                        <select id="propertyType">
+
+                            <option value="">
+                                All Types
+                            </option>
+
+                            <option value="house">
+                                Houses
+                            </option>
+
+                            <option value="apartment">
+                                Apartments
+                            </option>
+
+                            <option value="land">
+                                Land
+                            </option>
+
+                            <option value="commercial">
+                                Commercial
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Location -->
+
+                <div class="filter-field">
+
+                    <label for="location">
+                        Location
+                    </label>
+
+                    <div class="select-wrapper">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <select id="location">
+
+                            <option value="">
+                                All Locations
+                            </option>
+
+                            <option value="abuja">
+                                Abuja
+                            </option>
+
+                            <option value="lagos">
+                                Lagos
+                            </option>
+
+                            <option value="port-harcourt">
+                                Port Harcourt
+                            </option>
+
+                            <option value="ibadan">
+                                Ibadan
+                            </option>
+
+                            <option value="kano">
+                                Kano
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Listing Status -->
+
+                <div class="filter-field">
+
+                    <label for="status">
+                        Listing Status
+                    </label>
+
+                    <div class="select-wrapper">
+
+                        <i class="fa-solid fa-tag"></i>
+
+                        <select id="status">
+
+                            <option value="">
+                                Buy or Rent
+                            </option>
+
+                            <option value="sale">
+                                For Sale
+                            </option>
+
+                            <option value="rent">
+                                For Rent
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Bedrooms -->
+
+                <div class="filter-field">
+
+                    <label for="bedrooms">
+                        Bedrooms
+                    </label>
+
+                    <div class="select-wrapper">
+
+                        <i class="fa-solid fa-bed"></i>
+
+                        <select id="bedrooms">
+
+                            <option value="">
+                                Any
+                            </option>
+
+                            <option value="1">
+                                1+
+                            </option>
+
+                            <option value="2">
+                                2+
+                            </option>
+
+                            <option value="3">
+                                3+
+                            </option>
+
+                            <option value="4">
+                                4+
+                            </option>
+
+                            <option value="5">
+                                5+
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Price -->
+
+                <div class="filter-field">
+
+                    <label for="price">
+                        Maximum Price
+                    </label>
+
+                    <div class="select-wrapper">
+
+                        <i class="fa-solid fa-naira-sign"></i>
+
+                        <select id="price">
+
+                            <option value="">
+                                Any Price
+                            </option>
+
+                            <option value="30000000">
+                                ₦30 Million
+                            </option>
+
+                            <option value="50000000">
+                                ₦50 Million
+                            </option>
+
+                            <option value="100000000">
+                                ₦100 Million
+                            </option>
+
+                            <option value="200000000">
+                                ₦200 Million
+                            </option>
+
+                            <option value="500000000">
+                                ₦500 Million
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <button type="submit" class="search-property-btn">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    Search
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROPERTY LISTINGS
+===================================================== -->
+
+<section class="properties-section">
+
+    <div class="container">
+
+
+        <!-- Listing Header -->
+
+        <div class="listing-header">
+
+            <div>
+
+                <span class="section-label">
+                    OUR LISTINGS
+                </span>
+
+                <h2>Available Properties</h2>
+
+                <p>
+                    Showing <strong id="propertyCount">6</strong>
+                    properties
+                </p>
+
+            </div>
+
+
+            <div class="listing-sort">
+
+                <label for="sortProperties">
+                    Sort by:
+                </label>
+
+                <select id="sortProperties">
+
+                    <option value="featured">
+                        Featured
+                    </option>
+
+                    <option value="newest">
+                        Newest
+                    </option>
+
+                    <option value="price-low">
+                        Price: Low to High
+                    </option>
+
+                    <option value="price-high">
+                        Price: High to Low
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PROPERTY GRID
+        ================================================== -->
+
+        <div class="property-listing-grid" id="propertyGrid">
+
+
+            <!-- =============================================
+                 PROPERTY 1
+            ============================================== -->
+
+           <article class="listing-property-card"
+         data-type="house"
+         data-location="abuja"
+         data-status="sale"
+         data-bedrooms="5"
+         data-price="450000000">
+
+    <!-- PROPERTY PICTURE -->
+    <div class="listing-image">
+
+        <img src="../images/properties/property-01.webp"
+             alt="Four bedroom terrace duplex">
+
+        <span class="listing-status">
+            For Sale
+        </span>
+
+        <span class="featured-badge">
+            Featured
+        </span>
+
+        <button class="favorite-btn"
+                aria-label="Add property to favorites">
+
+            <i class="fa-regular fa-heart"></i>
+
+        </button>
+
+    </div>
+
+
+    <!-- SPACE BETWEEN PICTURE AND VIDEO -->
+    <div style="height: 30px;"></div>
+
+
+    <!-- PROPERTY VIDEO -->
+    <div class="listing-video">
+
+        <!-- VIDEO TITLE -->
+        <div style="
+            padding: 12px 0;
+            margin-bottom: 12px;
+            color: var(--primary);
+            font-family: var(--font-heading);
+            font-size: 21px;
+            font-weight: 600;
+        ">
+            Video Reference
+        </div>
+
+        <video
+            autoplay
+            muted
+            loop
+            playsinline
+            controls
+            style="width: 100%; height: 260px; display: block; object-fit: cover;">
+
+            <source src="../images/properties/property-land-video.mp4"
+                    type="video/mp4">
+
+            Your browser does not support the video tag.
+
+        </video>
+
+    </div>
+
+
+    <!-- SPACE BETWEEN VIDEO AND PROPERTY INFORMATION -->
+    <div style="height: 30px;"></div>
+
+
+    <!-- PROPERTY INFORMATION -->
+    <div class="listing-content">
+
+        <span class="listing-type">
+            Terrace Duplex
+        </span>
+
+        <h3>
+            4 Bedroom Terrace Duplex
+        </h3>
+
+        <p class="listing-location">
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            Guzape, Abuja
+
+        </p>
+
+
+        <div class="listing-features">
+
+            <span>
+                <i class="fa-solid fa-bed"></i>
+                4 Beds
+            </span>
+
+            <span>
+                <i class="fa-solid fa-bath"></i>
+                Room BQ
+            </span>
+
+            <span>
+                <i class="fa-solid fa-ruler-combined"></i>
+                2 Spacious Living Rooms
+            </span>
+
+        </div>
+
+
+        <div class="listing-footer">
+
+            <div class="listing-price">
+
+                <small>
+                    Price
+                </small>
+
+                <strong>
+                    ₦450,000,000
+                </strong>
+
+            </div>
+
+
+            <a href="property-details.html"
+               class="view-property">
+
+                View Details
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</article>
+
+            <!-- =============================================
+                 PROPERTY 2
+            ============================================== -->
+
+            <article class="listing-property-card"
+         data-type="land"
+         data-location="abuja"
+         data-status="sale"
+         data-land="1.71hc"
+         data-price="7000000000">
+
+    <!-- PROPERTY IMAGE -->
+    <div class="listing-image">
+
+        <img src="../images/properties/property-02.webp"
+             alt="1.71 Hectares of Land">
+
+        <span class="listing-status sale">
+            For Sale
+        </span>
+
+        <button class="favorite-btn"
+                aria-label="Add property to favorites">
+
+            <i class="fa-regular fa-heart"></i>
+
+        </button>
+
+    </div>
+
+
+    <!-- VIDEO REFERENCE -->
+    <div class="listing-video"
+         style="margin-top: 30px;">
+
+        <h4 style="
+            margin: 0 0 12px 0;
+            color: var(--primary);
+            font-family: var(--font-heading);
+            font-size: 20px;
+            font-weight: 600;
+        ">
+            Video Reference
+        </h4>
+
+        <video
+            autoplay
+            muted
+            loop
+            playsinline
+            controls
+            preload="metadata"
+            style="width: 100%; height: 260px; display: block; object-fit: cover;">
+
+            <source src="../images/properties/property-land-video.mp4"
+                    type="video/mp4">
+
+            Your browser does not support the video tag.
+
+        </video>
+
+    </div>
+
+
+    <!-- PROPERTY CONTENT -->
+    <div class="listing-content">
+
+        <span class="listing-type">
+            Land
+        </span>
+
+        <h3>
+            1.71 Hectares of Land
+        </h3>
+
+        <p class="listing-location">
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            Wasa, Abuja
+
+        </p>
+
+
+        <div class="listing-features">
+
+            <span>
+                <i class="fa-solid fa-bed"></i>
+                1.71 Hectares
+            </span>
+
+            <span>
+                <i class="fa-solid fa-bath"></i>
+                Land
+            </span>
+
+            <span>
+                <i class="fa-solid fa-ruler-combined"></i>
+                1.71h
+            </span>
+
+        </div>
+
+
+        <div class="listing-footer">
+
+            <div class="listing-price">
+
+                <small>
+                    Sale
+                </small>
+
+                <strong>
+                    ₦700,000,000
+                </strong>
+
+            </div>
+
+
+            <a href="property-details.html"
+               class="view-property">
+
+                View Details
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</article>
+
+            <!-- =============================================
+                 PROPERTY 3
+            ============================================== -->
+
+            <article class="listing-property-card"
+         data-type="house"
+         data-location="lagos"
+         data-status="sale"
+         data-bedrooms="4"
+         data-price="175000000">
+
+    <!-- PROPERTY IMAGE -->
+    <div class="listing-image">
+
+        <img src="../images/properties/property-03.webp"
+             alt="Contemporary four bedroom residence">
+
+        <span class="listing-status">
+            For Sale
+        </span>
+
+        <button class="favorite-btn"
+                aria-label="Add property to favorites">
+
+            <i class="fa-regular fa-heart"></i>
+
+        </button>
+
+    </div>
+
+
+    <!-- PROPERTY VIDEO -->
+    <div class="property-video" style="margin-top: 25px;">
+
+        <h4 style="
+            margin-bottom: 12px;
+            color: var(--primary);
+            font-family: var(--font-heading);
+            font-size: 20px;
+        ">
+            Video Reference
+        </h4>
+
+        <video controls
+               muted
+               loop
+               playsinline
+               preload="metadata"
+               style="width: 100%; height: 260px; display: block; object-fit: cover;">
+
+            <source src="../images/properties/property-03-land-video.mp4"
+                    type="video/mp4">
+
+            Your browser does not support the video element.
+
+        </video>
+
+    </div>
+
+
+    <!-- PROPERTY CONTENT -->
+    <div class="listing-content">
+
+        <span class="listing-type">
+            Family Home
+        </span>
+
+        <h3>
+            Contemporary 4 Bedroom Residence
+        </h3>
+
+        <p class="listing-location">
+            <i class="fa-solid fa-location-dot"></i>
+            Lekki Phase 1, Lagos
+        </p>
+
+        <div class="listing-features">
+
+            <span>
+                <i class="fa-solid fa-bed"></i>
+                4 Beds
+            </span>
+
+            <span>
+                <i class="fa-solid fa-bath"></i>
+                5 Baths
+            </span>
+
+            <span>
+                <i class="fa-solid fa-ruler-combined"></i>
+                420 m²
+            </span>
+
+        </div>
+
+        <div class="listing-footer">
+
+            <div class="listing-price">
+
+                <small>Price</small>
+
+                <strong>
+                    ₦450,000,000
+                </strong>
+
+            </div>
+
+            <a href="property-details.html"
+               class="view-property">
+
+                View Details
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</article>
+            <!-- =============================================
+                 PROPERTY 5
+            ============================================== -->
+
+            <article class="listing-property-card"
+                     data-type="land"
+                     data-location="abuja"
+                     data-status="sale"
+                     data-bedrooms="0"
+                     data-price="45000000">
+
+                <div class="listing-image">
+
+                    <img src="../images/properties/property-05.webp"
+                         alt="Residential land in Abuja">
+
+                    <span class="listing-status">
+                        For Sale
+                    </span>
+
+                    <button class="favorite-btn"
+                            aria-label="Add property to favorites">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+                </div>
+
+                 <!-- VIDEO REFERENCE -->
+    <div class="listing-video"
+         style="margin-top: 30px;">
+
+        <h4 style="
+            margin: 0 0 12px 0;
+            color: var(--primary);
+            font-family: var(--font-heading);
+            font-size: 20px;
+            font-weight: 600;
+        ">
+            Video Reference
+        </h4>
+
+        <video
+            autoplay
+            muted
+            loop
+            playsinline
+            controls
+            preload="metadata"
+            style="width: 100%; height: 260px; display: block; object-fit: cover;">
+
+            <source src="../images/properties/property-land-video.mp4"
+                    type="video/mp4">
+
+            Your browser does not support the video tag.
+
+        </video>
+
+    </div>
+
+
+                <div class="listing-content">
+
+                    <span class="listing-type">
+                        Residential Land
+                    </span>
+
+                    <h3>
+                        Premium Residential Plot
+                    </h3>
+
+                    <p class="listing-location">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Gwarinpa, Abuja
+
+                    </p>
+
+
+                    <div class="listing-features">
+
+                        <span>
+                            <i class="fa-solid fa-vector-square"></i>
+                            1 Plot
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-road"></i>
+                            Good Road
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-file-circle-check"></i>
+                            Verified
+                        </span>
+
+                    </div>
+
+
+                    <div class="listing-footer">
+
+                        <div class="listing-price">
+
+                            <small>
+                                Price
+                            </small>
+
+                            <strong>
+                                ₦45,000,000
+                            </strong>
+
+                        </div>
+
+
+                        <a href="property-details.html"
+                           class="view-property">
+
+                            View Details
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =============================================
+                 PROPERTY 6
+            ============================================== -->
+
+            <article class="listing-property-card"
+                     data-type="commercial"
+                     data-location="port-harcourt"
+                     data-status="sales"
+                     data-bedrooms="4"
+                     data-price="15000000">
+
+                <div class="listing-image">
+
+                    <img src="../images/properties/property-06.webp"
+                         alt="Commercial property in Port Harcourt">
+
+                    <span class="listing-status sale">
+                        For Sale
+                    </span>
+
+                    <button class="favorite-btn"
+                            aria-label="Add property to favorites">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+                </div>
+
+                 <!-- VIDEO REFERENCE -->
+    <div class="listing-video"
+         style="margin-top: 30px;">
+
+        <h4 style="
+            margin: 0 0 12px 0;
+            color: var(--primary);
+            font-family: var(--font-heading);
+            font-size: 20px;
+            font-weight: 600;
+        ">
+            Video Reference
+        </h4>
+
+        <video
+            autoplay
+            muted
+            loop
+            playsinline
+            controls
+            preload="metadata"
+            style="width: 100%; height: 260px; display: block; object-fit: cover;">
+
+            <source src="../images/properties/property-land-video.mp4"
+                    type="video/mp4">
+
+            Your browser does not support the video tag.
+
+        </video>
+
+    </div>
+
+
+                <div class="listing-content">
+
+                    <span class="listing-type">
+                        Commercial  and Private Property
+                    </span>
+
+                    <h3>
+                        Modern Commercial or Private Property
+                    </h3>
+
+                    <p class="listing-location">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Guzape, Abuja
+
+                    </p>
+
+
+                    <div class="listing-features">
+
+                        <span>
+                            <i class="fa-solid fa-building"></i>
+                            Residential or Private
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-car"></i>
+                            Parking
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-ruler-combined"></i>
+                            850 m²
+                        </span>
+
+                    </div>
+
+
+                    <div class="listing-footer">
+
+                        <div class="listing-price">
+
+                            <small>
+                                For Sale
+                            </small>
+
+                            <strong>
+                                ₦15,000,000
+                            </strong>
+
+                        </div>
+
+
+                        <a href="property-details.html"
+                           class="view-property">
+
+                            View Details
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+
+        <!-- =================================================
+             NO RESULTS
+        ================================================== -->
+
+        <div class="no-results" id="noResults">
+
+            <div class="no-results-icon">
+                <i class="fa-solid fa-house-circle-exclamation"></i>
+            </div>
+
+            <h3>No Properties Found</h3>
+
+            <p>
+                We couldn't find properties matching your
+                selected criteria.
+            </p>
+
+            <button type="button" id="resetFilters">
+                Reset Search
+            </button>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PAGINATION
+        ================================================== -->
+
+        <div class="pagination">
+
+            <button class="pagination-btn disabled"
+                    aria-label="Previous page">
+
+                <i class="fa-solid fa-chevron-left"></i>
+
+            </button>
+
+
+            <button class="pagination-btn active">
+                1
+            </button>
+
+            <button class="pagination-btn">
+                2
+            </button>
+
+            <button class="pagination-btn">
+                3
+            </button>
+
+
+            <span class="pagination-dots">
+                ...
+            </span>
+
+
+            <button class="pagination-btn">
+                8
+            </button>
+
+
+            <button class="pagination-btn"
+                    aria-label="Next page">
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="cta">
+
+    <div class="container cta-content">
+
+        <div>
+
+            <span class="section-label">
+                CAN'T FIND WHAT YOU NEED?
+            </span>
+
+            <h2>
+                Let Us Find It For You.
+            </h2>
+
+            <p>
+                Tell our property experts what you're looking for
+                and we'll help you find suitable options.
+            </p>
+
+        </div>
+
+
+        <a href="contact.html" class="cta-btn">
+
+            Talk To An Agent
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+
+        <!-- Brand -->
+
+        <div class="footer-brand">
+
+            <a href="../index.html" class="logo footer-logo">
+
+                <span class="logo-icon">
+                    <img src="../images/crownstonelogo.webp" alt="Crownstone Properties Logo">
+                </span>
+
+                <span>
+                    Crownstone<span> Properties</span>
+                </span>
+
+            </a>
+
+
+            <p>
+                Your trusted partner for buying, selling, renting
+                and investing in real estate.
+            </p>
+
+
+            <div class="social-links">
+
+                <a href="https://www.facebook.com/share/18xpwoxYc4/" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="https://www.instagram.com/crow_nstoneproperties/" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" aria-label="X">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Quick Links -->
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="properties.html">
+                Properties
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+
+        <!-- Property Types -->
+
+        <div class="footer-column">
+
+            <h3>
+                Property Types
+            </h3>
+
+            <a href="properties.html?type=house">
+                Houses
+            </a>
+
+            <a href="properties.html?type=apartment">
+                Apartments
+            </a>
+
+            <a href="properties.html?type=land">
+                Land
+            </a>
+
+            <a href="properties.html?type=commercial">
+                Commercial
+            </a>
+
+        </div>
+
+
+
+        <!-- Contact -->
+
+        <div class="footer-column">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Abuja, Nigeria
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +234 705 818 4550
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                hello@crownstone.com
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <p>
+                &copy; 2026 Crownstone.
+                All Rights Reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="../js/main.js"></script>
+<script src="../js/properties.js"></script>
+
+</body>
+</html>
