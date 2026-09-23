@@ -1,26 +1,211 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Properties | Crownstone Properties</title>
-    <meta name="description" content="Discover premium homes, apartments, lands and commercial properties with Crownstone Properties.">
 
+    <meta
+        name="description"
+        content="Discover premium homes, apartments, lands and commercial properties with Crownstone Properties.">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
 
-    <!-- Icons -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         MOBILE HAMBURGER MENU
+    ====================================================== -->
+
+    <style>
+
+        .menu-toggle {
+
+            display: none;
+
+            border: none;
+
+            background: transparent;
+
+            color: var(--primary);
+
+            font-size: 26px;
+
+            cursor: pointer;
+
+            padding: 8px;
+
+            line-height: 1;
+
+            z-index: 1002;
+
+        }
+
+
+        .menu-toggle i {
+
+            pointer-events: none;
+
+        }
+
+
+        @media (max-width: 760px) {
+
+            .nav-container {
+
+                position: relative;
+
+            }
+
+
+            .menu-toggle {
+
+                display: flex;
+
+                align-items: center;
+
+                justify-content: center;
+
+            }
+
+
+            .nav-btn {
+
+                display: none;
+
+            }
+
+
+            .navbar {
+
+                position: absolute;
+
+                top: calc(100% + 1px);
+
+                left: 0;
+
+                right: 0;
+
+                display: flex;
+
+                flex-direction: column;
+
+                align-items: stretch;
+
+                background: #ffffff;
+
+                border-top: 1px solid var(--border);
+
+                border-bottom: 1px solid var(--border);
+
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.10);
+
+                padding: 10px 0;
+
+                opacity: 0;
+
+                visibility: hidden;
+
+                transform: translateY(-10px);
+
+                transition:
+                    opacity 0.25s ease,
+                    visibility 0.25s ease,
+                    transform 0.25s ease;
+
+                z-index: 1000;
+
+            }
+
+
+            .navbar.active {
+
+                opacity: 1;
+
+                visibility: visible;
+
+                transform: translateY(0);
+
+            }
+
+
+            .navbar a {
+
+                display: block;
+
+                width: 100%;
+
+                padding: 14px 24px;
+
+                text-align: left;
+
+                border-bottom: 1px solid #f0f1ee;
+
+            }
+
+
+            .navbar a:last-child {
+
+                border-bottom: none;
+
+            }
+
+
+            .navbar a:hover,
+            .navbar a.active {
+
+                background: var(--off-white);
+
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .menu-toggle {
+
+                font-size: 24px;
+
+            }
+
+
+            .navbar a {
+
+                padding: 13px 20px;
+
+            }
+
+        }
+
+    </style>
+
 </head>
 
+
 <body>
+
 
 <!-- =====================================================
      HEADER
@@ -30,54 +215,108 @@
 
     <div class="container nav-container">
 
+
+        <!-- LOGO -->
+
         <a href="index.html" class="logo">
+
             <span class="logo-icon">
-                <img src="images/crownstonelogo.webp" alt="Crownstone Properties">
+
+                <img
+                    src="images/crownstonelogo.webp"
+                    alt="Crownstone Properties">
+
             </span>
 
             <span>
                 Crownstone <span>Properties</span>
             </span>
+
         </a>
 
-        <nav class="navbar">
 
-            <a href="index.html" class="active">
+        <!-- NAVIGATION -->
+
+        <nav
+            class="navbar"
+            id="mainNavigation">
+
+            <a
+                href="index.html"
+                class="active">
+
                 Home
+
             </a>
+
 
             <a href="pages/properties.html">
+
                 Properties
+
             </a>
+
 
             <a href="pages/services.html">
+
                 Services
+
             </a>
+
 
             <a href="pages/agents.html">
+
                 Agents
+
             </a>
+
 
             <a href="pages/about.html">
+
                 About
+
             </a>
+
 
             <a href="pages/blog.html">
+
                 Blog
+
             </a>
 
+
             <a href="pages/contact.html">
+
                 Contact
+
             </a>
 
         </nav>
 
-        <a href="pages/contact.html" class="nav-btn">
+
+        <!-- DESKTOP CONTACT BUTTON -->
+
+        <a
+            href="pages/contact.html"
+            class="nav-btn">
+
             Get In Touch
+
         </a>
 
-        <button class="menu-toggle" aria-label="Open navigation">
+
+        <!-- HAMBURGER -->
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="mainNavigation">
+
             <i class="fa-solid fa-bars"></i>
+
         </button>
 
     </div>
@@ -85,38 +324,59 @@
 </header>
 
 
-<!-- ================= HERO ================= -->
+
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="hero">
 
     <div class="hero-overlay"></div>
 
+
     <div class="container hero-content">
 
+
         <span class="hero-tag">
+
             <i class="fa-solid fa-location-dot"></i>
+
             Your Trusted Real Estate Partner
+
         </span>
 
+
         <h1>
+
             Find a Place You'll
-            <span>Love to Call Home.</span>
+
+            <span>
+                Love to Call Home.
+            </span>
+
         </h1>
 
+
         <p>
-            At Crownstone Properties, we make real estate simple, secure, and rewarding.
-            Whether you are looking to rent a beautiful apartment, buy your dream home,
-            acquire prime land, or sell your property, we connect you with the right
-            opportunities in strategic locations across Abuja, Nasarawa and other major
-            cities in Nigeria.
+
+            At Crownstone Properties, we make real estate simple,
+            secure, and rewarding. Whether you are looking to rent
+            a beautiful apartment, buy your dream home, acquire
+            prime land, or sell your property, we connect you with
+            the right opportunities in strategic locations across
+            Abuja, Nasarawa and other major cities in Nigeria.
+
         </p>
 
 
         <!-- =================================================
-             FUNCTIONAL PROPERTY SEARCH
+             PROPERTY SEARCH
         ================================================== -->
 
-        <form class="property-search" id="propertySearch">
+        <form
+            class="property-search"
+            id="propertySearch">
+
 
             <!-- PROPERTY TYPE -->
 
@@ -126,7 +386,10 @@
                     Looking For
                 </label>
 
-                <select id="searchType" name="type">
+
+                <select
+                    id="searchType"
+                    name="type">
 
                     <option value="">
                         Property Type
@@ -161,7 +424,10 @@
                     Location
                 </label>
 
-                <select id="searchLocation" name="location">
+
+                <select
+                    id="searchLocation"
+                    name="location">
 
                     <option value="">
                         Choose Location
@@ -204,7 +470,10 @@
                     Price Range
                 </label>
 
-                <select id="searchPrice" name="price">
+
+                <select
+                    id="searchPrice"
+                    name="price">
 
                     <option value="">
                         Select Budget
@@ -235,7 +504,7 @@
             </div>
 
 
-            <!-- SEARCH BUTTON -->
+            <!-- SEARCH -->
 
             <button
                 type="submit"
@@ -251,7 +520,7 @@
         </form>
 
 
-        <!-- SEARCH RESULT MESSAGE -->
+        <!-- SEARCH RESULT -->
 
         <div
             id="searchResultMessage"
@@ -273,15 +542,20 @@
 
 
 
-<!-- ================= STATS ================= -->
+<!-- =====================================================
+     STATS
+===================================================== -->
 
 <section class="stats">
 
     <div class="container stats-grid">
 
+
         <div class="stat-item">
 
-            <strong>500+</strong>
+            <strong>
+                500+
+            </strong>
 
             <span>
                 Properties Listed
@@ -292,7 +566,9 @@
 
         <div class="stat-item">
 
-            <strong>350+</strong>
+            <strong>
+                350+
+            </strong>
 
             <span>
                 Happy Clients
@@ -303,7 +579,9 @@
 
         <div class="stat-item">
 
-            <strong>25+</strong>
+            <strong>
+                25+
+            </strong>
 
             <span>
                 Expert Agents
@@ -314,7 +592,9 @@
 
         <div class="stat-item">
 
-            <strong>10+</strong>
+            <strong>
+                10+
+            </strong>
 
             <span>
                 Years Experience
@@ -336,6 +616,7 @@
 
     <div class="container">
 
+
         <div class="section-heading">
 
             <div>
@@ -350,7 +631,10 @@
 
             </div>
 
-            <a href="pages/properties.html" class="outline-btn">
+
+            <a
+                href="pages/properties.html"
+                class="outline-btn">
 
                 View All Properties
 
@@ -364,15 +648,14 @@
         <div class="property-grid">
 
 
-            <!-- =================================================
-                 PROPERTY 1
-            ================================================== -->
+            <!-- PROPERTY 1 -->
 
             <article
                 class="property-card"
                 data-property-type="house"
                 data-property-location="abuja"
                 data-property-price="450000000">
+
 
                 <div class="property-image">
 
@@ -384,8 +667,10 @@
                         For Sale
                     </span>
 
+
                     <button
                         class="favorite-btn"
+                        type="button"
                         aria-label="Add to favorites">
 
                         <i class="fa-regular fa-heart"></i>
@@ -395,21 +680,23 @@
                 </div>
 
 
-                <!-- VIDEO REFERENCE -->
-
                 <div
                     class="listing-video"
                     style="margin-top:30px;">
 
-                    <h4 style="
-                        margin:0 0 12px 0;
-                        color:var(--primary);
-                        font-family:var(--font-heading);
-                        font-size:20px;
-                        font-weight:600;
-                    ">
+                    <h4
+                        style="
+                            margin:0 0 12px 0;
+                            color:var(--primary);
+                            font-family:var(--font-heading);
+                            font-size:20px;
+                            font-weight:600;
+                        ">
+
                         Video Reference
+
                     </h4>
+
 
                     <video
                         autoplay
@@ -429,7 +716,8 @@
                             src="images/properties/property-land-video.mp4"
                             type="video/mp4">
 
-                        Your browser does not support the video tag.
+                        Your browser does not support
+                        the video tag.
 
                     </video>
 
@@ -437,6 +725,7 @@
 
 
                 <div class="property-info">
+
 
                     <span class="property-type">
 
@@ -510,15 +799,14 @@
 
 
 
-            <!-- =================================================
-                 PROPERTY 2
-            ================================================== -->
+            <!-- PROPERTY 2 -->
 
             <article
                 class="property-card"
                 data-property-type="land"
                 data-property-location="abuja"
                 data-property-price="700000000">
+
 
                 <div class="property-image">
 
@@ -530,8 +818,10 @@
                         For Sale
                     </span>
 
+
                     <button
                         class="favorite-btn"
+                        type="button"
                         aria-label="Add to favorites">
 
                         <i class="fa-regular fa-heart"></i>
@@ -545,15 +835,19 @@
                     class="listing-video"
                     style="margin-top:30px;">
 
-                    <h4 style="
-                        margin:0 0 12px 0;
-                        color:var(--primary);
-                        font-family:var(--font-heading);
-                        font-size:20px;
-                        font-weight:600;
-                    ">
+                    <h4
+                        style="
+                            margin:0 0 12px 0;
+                            color:var(--primary);
+                            font-family:var(--font-heading);
+                            font-size:20px;
+                            font-weight:600;
+                        ">
+
                         Video Reference
+
                     </h4>
+
 
                     <video
                         autoplay
@@ -573,7 +867,8 @@
                             src="images/properties/property-land-video.mp4"
                             type="video/mp4">
 
-                        Your browser does not support the video tag.
+                        Your browser does not support
+                        the video tag.
 
                     </video>
 
@@ -581,6 +876,7 @@
 
 
                 <div class="property-info">
+
 
                     <span class="property-type">
 
@@ -654,15 +950,14 @@
 
 
 
-            <!-- =================================================
-                 PROPERTY 3
-            ================================================== -->
+            <!-- PROPERTY 3 -->
 
             <article
                 class="property-card"
                 data-property-type="house"
                 data-property-location="abuja"
                 data-property-price="450000000">
+
 
                 <div class="property-image">
 
@@ -674,8 +969,10 @@
                         For Sale
                     </span>
 
+
                     <button
                         class="favorite-btn"
+                        type="button"
                         aria-label="Add to favorites">
 
                         <i class="fa-regular fa-heart"></i>
@@ -689,15 +986,19 @@
                     class="listing-video"
                     style="margin-top:30px;">
 
-                    <h4 style="
-                        margin:0 0 12px 0;
-                        color:var(--primary);
-                        font-family:var(--font-heading);
-                        font-size:20px;
-                        font-weight:600;
-                    ">
+                    <h4
+                        style="
+                            margin:0 0 12px 0;
+                            color:var(--primary);
+                            font-family:var(--font-heading);
+                            font-size:20px;
+                            font-weight:600;
+                        ">
+
                         Video Reference
+
                     </h4>
+
 
                     <video
                         autoplay
@@ -717,7 +1018,8 @@
                             src="images/properties/property-land-video.mp4"
                             type="video/mp4">
 
-                        Your browser does not support the video tag.
+                        Your browser does not support
+                        the video tag.
 
                     </video>
 
@@ -725,6 +1027,7 @@
 
 
                 <div class="property-info">
+
 
                     <span class="property-type">
 
@@ -811,6 +1114,7 @@
 <section class="section categories">
 
     <div class="container">
+
 
         <div class="center-heading">
 
@@ -932,12 +1236,14 @@
 
     <div class="container about-grid">
 
+
         <div class="about-images">
 
             <img
                 src="images/properties/property-04.webp"
                 alt="Crownstone property"
                 class="about-main-image">
+
 
             <div class="experience-card">
 
@@ -961,23 +1267,28 @@
                 ABOUT CROWNSTONE
             </span>
 
+
             <h2>
                 Helping You Find More Than Just a Property.
             </h2>
+
 
             <p>
                 At Crownstone, we believe finding the right property
                 should be simple, transparent and rewarding.
             </p>
 
+
             <p>
-                Our experienced team connects buyers, sellers, tenants
-                and investors with carefully selected properties in
-                some of Nigeria's most desirable locations.
+                Our experienced team connects buyers, sellers,
+                tenants and investors with carefully selected
+                properties in some of Nigeria's most desirable
+                locations.
             </p>
 
 
             <div class="about-list">
+
 
                 <div>
 
@@ -1040,6 +1351,7 @@
 
     <div class="container">
 
+
         <div class="center-heading">
 
             <span class="section-label">
@@ -1051,8 +1363,8 @@
             </h2>
 
             <p>
-                Professional real estate services designed around
-                your needs.
+                Professional real estate services designed
+                around your needs.
             </p>
 
         </div>
@@ -1069,14 +1381,17 @@
 
                 </div>
 
+
                 <h3>
                     Property Sales
                 </h3>
+
 
                 <p>
                     Find your ideal property or sell your property
                     with support from our experienced team.
                 </p>
+
 
                 <a href="pages/services.html">
 
@@ -1097,14 +1412,17 @@
 
                 </div>
 
+
                 <h3>
                     Property Rentals
                 </h3>
+
 
                 <p>
                     Explore quality rental properties in locations
                     that match your lifestyle and budget.
                 </p>
+
 
                 <a href="pages/services.html">
 
@@ -1125,14 +1443,17 @@
 
                 </div>
 
+
                 <h3>
                     Property Investment
                 </h3>
+
 
                 <p>
                     Get professional guidance when identifying
                     real estate investment opportunities.
                 </p>
+
 
                 <a href="pages/services.html">
 
@@ -1160,19 +1481,22 @@
 
     <div class="container cta-content">
 
+
         <div>
 
             <span class="section-label">
                 READY TO GET STARTED?
             </span>
 
+
             <h2>
                 Let's Find Your Dream Property.
             </h2>
 
+
             <p>
-                Tell us what you're looking for and our team will
-                help you find the right property.
+                Tell us what you're looking for and our team
+                will help you find the right property.
             </p>
 
         </div>
@@ -1202,6 +1526,7 @@
 
     <div class="container">
 
+
         <div class="footer-grid">
 
 
@@ -1221,6 +1546,7 @@
 
                     </span>
 
+
                     <span>
                         Crownstone <span>Properties</span>
                     </span>
@@ -1229,12 +1555,13 @@
 
 
                 <p>
-                    Professional real estate solutions for
-                    homes, investments and property opportunities.
+                    Professional real estate solutions for homes,
+                    investments and property opportunities.
                 </p>
 
 
                 <div class="social-links">
+
 
                     <a
                         href="https://www.facebook.com/share/18xpwoxYc4/"
@@ -1285,29 +1612,36 @@
                     Quick Links
                 </h3>
 
+
                 <a href="index.html">
                     Home
                 </a>
+
 
                 <a href="pages/about.html">
                     About Us
                 </a>
 
+
                 <a href="pages/properties.html">
                     Properties
                 </a>
+
 
                 <a href="pages/agents.html">
                     Agents
                 </a>
 
+
                 <a href="pages/services.html">
                     Services
                 </a>
 
+
                 <a href="pages/blog.html">
                     Blog
                 </a>
+
 
                 <a href="pages/contact.html">
                     Contact
@@ -1325,25 +1659,31 @@
                     Services
                 </h3>
 
+
                 <a href="pages/services.html">
                     Property Sales
                 </a>
+
 
                 <a href="pages/services.html">
                     Property Rentals
                 </a>
 
+
                 <a href="pages/services.html">
                     Property Investment
                 </a>
+
 
                 <a href="pages/services.html">
                     Property Marketing
                 </a>
 
+
                 <a href="pages/services.html">
                     Property Management
                 </a>
+
 
                 <a href="pages/services.html">
                     Real Estate Advisory
@@ -1360,6 +1700,7 @@
                 <h3>
                     Contact Us
                 </h3>
+
 
                 <p>
 
@@ -1421,18 +1762,196 @@
 
 
 <!-- =====================================================
-     SEARCH FUNCTION
+     JAVASCRIPT
 ===================================================== -->
 
 <script>
 
 document.addEventListener("DOMContentLoaded", function () {
 
+
+    /* =====================================================
+       HAMBURGER MENU
+    ===================================================== */
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const navbar =
+        document.getElementById("mainNavigation");
+
+
+    if (menuToggle && navbar) {
+
+
+        const menuIcon =
+            menuToggle.querySelector("i");
+
+
+        function openMenu() {
+
+            navbar.classList.add("active");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "true"
+            );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Close navigation"
+            );
+
+
+            menuIcon.classList.remove(
+                "fa-bars"
+            );
+
+            menuIcon.classList.add(
+                "fa-xmark"
+            );
+
+        }
+
+
+        function closeMenu() {
+
+            navbar.classList.remove("active");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Open navigation"
+            );
+
+
+            menuIcon.classList.remove(
+                "fa-xmark"
+            );
+
+            menuIcon.classList.add(
+                "fa-bars"
+            );
+
+        }
+
+
+        menuToggle.addEventListener(
+            "click",
+            function (event) {
+
+                event.stopPropagation();
+
+
+                if (
+                    navbar.classList.contains("active")
+                ) {
+
+                    closeMenu();
+
+                } else {
+
+                    openMenu();
+
+                }
+
+            }
+        );
+
+
+        /* CLOSE AFTER NAVIGATION */
+
+        navbar.querySelectorAll("a").forEach(
+            function (link) {
+
+                link.addEventListener(
+                    "click",
+                    function () {
+
+                        closeMenu();
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* CLOSE WHEN CLICKING OUTSIDE */
+
+        document.addEventListener(
+            "click",
+            function (event) {
+
+                if (
+                    navbar.classList.contains("active") &&
+                    !navbar.contains(event.target) &&
+                    !menuToggle.contains(event.target)
+                ) {
+
+                    closeMenu();
+
+                }
+
+            }
+        );
+
+
+        /* ESCAPE KEY */
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    event.key === "Escape" &&
+                    navbar.classList.contains("active")
+                ) {
+
+                    closeMenu();
+
+                    menuToggle.focus();
+
+                }
+
+            }
+        );
+
+
+        /* CLOSE ON DESKTOP */
+
+        window.addEventListener(
+            "resize",
+            function () {
+
+                if (window.innerWidth > 760) {
+
+                    closeMenu();
+
+                }
+
+            }
+        );
+
+    }
+
+
+
+    /* =====================================================
+       PROPERTY SEARCH
+    ===================================================== */
+
     const searchForm =
         document.getElementById("propertySearch");
 
     const searchButton =
-        document.getElementById("searchPropertiesBtn");
+        document.getElementById(
+            "searchPropertiesBtn"
+        );
 
     const searchType =
         document.getElementById("searchType");
@@ -1444,7 +1963,9 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("searchPrice");
 
     const resultMessage =
-        document.getElementById("searchResultMessage");
+        document.getElementById(
+            "searchResultMessage"
+        );
 
     const propertyCards =
         Array.from(
@@ -1459,15 +1980,18 @@ document.addEventListener("DOMContentLoaded", function () {
         );
 
 
-    /*
-     * PRICE RANGE CHECK
-     */
+    /* =====================================================
+       PRICE RANGE
+    ===================================================== */
 
     function priceMatches(price, range) {
 
         if (!range) {
+
             return true;
+
         }
+
 
         const value = Number(price);
 
@@ -1520,25 +2044,26 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /*
-     * RUN SEARCH
-     */
+    /* =====================================================
+       PROPERTY SEARCH
+    ===================================================== */
 
     function runPropertySearch() {
+
 
         const selectedType =
             searchType.value.toLowerCase();
 
+
         const selectedLocation =
             searchLocation.value.toLowerCase();
+
 
         const selectedPrice =
             searchPrice.value;
 
 
-        /*
-         * NO FILTER SELECTED
-         */
+        /* NO FILTER */
 
         if (
             !selectedType &&
@@ -1546,13 +2071,18 @@ document.addEventListener("DOMContentLoaded", function () {
             !selectedPrice
         ) {
 
-            propertyCards.forEach(function (card) {
 
-                card.style.display = "";
+            propertyCards.forEach(
+                function (card) {
 
-            });
+                    card.style.display = "";
+
+                }
+            );
+
 
             resultMessage.style.display = "none";
+
 
             return;
 
@@ -1562,94 +2092,74 @@ document.addEventListener("DOMContentLoaded", function () {
         let matches = 0;
 
 
-        /*
-         * CHECK EACH PROPERTY
-         */
+        /* CHECK CARDS */
 
-        propertyCards.forEach(function (card) {
-
-            const propertyType =
-                (
-                    card.dataset.propertyType || ""
-                ).toLowerCase();
+        propertyCards.forEach(
+            function (card) {
 
 
-            const propertyLocation =
-                (
-                    card.dataset.propertyLocation || ""
-                ).toLowerCase();
+                const propertyType =
+                    (
+                        card.dataset.propertyType || ""
+                    ).toLowerCase();
 
 
-            const propertyPrice =
-                card.dataset.propertyPrice || "";
+                const propertyLocation =
+                    (
+                        card.dataset.propertyLocation || ""
+                    ).toLowerCase();
 
 
-            /*
-             * TYPE MATCH
-             */
-
-            const typeMatch =
-                !selectedType ||
-                propertyType === selectedType;
+                const propertyPrice =
+                    card.dataset.propertyPrice || "";
 
 
-            /*
-             * LOCATION MATCH
-             */
-
-            const locationMatch =
-                !selectedLocation ||
-                propertyLocation === selectedLocation;
+                const typeMatch =
+                    !selectedType ||
+                    propertyType === selectedType;
 
 
-            /*
-             * PRICE MATCH
-             */
-
-            const priceMatch =
-                priceMatches(
-                    propertyPrice,
-                    selectedPrice
-                );
+                const locationMatch =
+                    !selectedLocation ||
+                    propertyLocation === selectedLocation;
 
 
-            /*
-             * FINAL MATCH
-             */
-
-            const isMatch =
-                typeMatch &&
-                locationMatch &&
-                priceMatch;
+                const priceMatch =
+                    priceMatches(
+                        propertyPrice,
+                        selectedPrice
+                    );
 
 
-            if (isMatch) {
+                const isMatch =
+                    typeMatch &&
+                    locationMatch &&
+                    priceMatch;
 
-                card.style.display = "";
 
-                matches++;
+                if (isMatch) {
 
-            } else {
+                    card.style.display = "";
 
-                card.style.display = "none";
+                    matches++;
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
 
             }
+        );
 
-        });
 
-
-        /*
-         * DISPLAY SEARCH RESULT
-         */
+        /* SHOW RESULT */
 
         resultMessage.style.display = "block";
 
 
-        /*
-         * MATCHES FOUND
-         */
-
         if (matches > 0) {
+
 
             resultMessage.textContent =
                 matches +
@@ -1660,92 +2170,122 @@ document.addEventListener("DOMContentLoaded", function () {
                 );
 
 
-            featuredSection.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
+            if (featuredSection) {
 
-        }
+                featuredSection.scrollIntoView({
+
+                    behavior: "smooth",
+
+                    block: "start"
+
+                });
+
+            }
 
 
-        /*
-         * NO MATCHES
-         */
+        } else {
 
-        else {
 
             resultMessage.innerHTML =
                 'No featured property matches those filters. ' +
 
                 '<a href="pages/properties.html" ' +
 
-                'style="color:#a98745;' +
+                'style="' +
+
+                'color:#a98745;' +
 
                 'font-weight:700;' +
 
-                'text-decoration:underline;">' +
+                'text-decoration:underline;' +
+
+                '">' +
 
                 'View all properties' +
 
                 '</a>.';
 
 
-            featuredSection.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
+            if (featuredSection) {
+
+                featuredSection.scrollIntoView({
+
+                    behavior: "smooth",
+
+                    block: "start"
+
+                });
+
+            }
 
         }
 
     }
 
 
-    /*
-     * SEARCH BUTTON
-     */
+    /* =====================================================
+       SEARCH BUTTON
+    ===================================================== */
 
-    searchButton.addEventListener(
-        "click",
-        runPropertySearch
-    );
+    if (searchButton) {
 
+        searchButton.addEventListener(
+            "click",
+            function (event) {
 
-    /*
-     * ENTER KEY
-     */
+                event.preventDefault();
 
-    searchForm.addEventListener(
-        "submit",
-        function (event) {
+                runPropertySearch();
 
-            event.preventDefault();
+            }
+        );
 
-            runPropertySearch();
-
-        }
-    );
+    }
 
 
-    /*
-     * LIVE FILTER
-     *
-     * Search updates when the user
-     * changes any filter.
-     */
+    /* =====================================================
+       SEARCH FORM
+    ===================================================== */
+
+    if (searchForm) {
+
+        searchForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+                runPropertySearch();
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       LIVE FILTER
+    ===================================================== */
 
     [
         searchType,
         searchLocation,
         searchPrice
 
-    ].forEach(function (select) {
+    ].forEach(
+        function (select) {
 
-        select.addEventListener(
-            "change",
-            runPropertySearch
-        );
+            if (select) {
 
-    });
+                select.addEventListener(
+                    "change",
+                    runPropertySearch
+                );
+
+            }
+
+        }
+    );
 
 });
 
@@ -1756,5 +2296,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <script src="js/main.js"></script>
 
+
 </body>
 </html>
+
