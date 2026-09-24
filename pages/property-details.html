@@ -91,14 +91,21 @@
     </a>
 
 
-    <button class="menu-toggle"
+    <!-- HAMBURGER -->
+        <button
+            class="menu-toggle"
+            id="menuToggle"
             type="button"
             aria-label="Open navigation"
-            aria-expanded="false">
+            aria-expanded="false"
+            aria-controls="mainNavigation">
 
-        <i class="fa-solid fa-bars"></i>
+            <i
+                class="fa-solid fa-bars"
+                aria-hidden="true">
+            </i>
 
-    </button>
+        </button>
 
 </div>
 
@@ -819,6 +826,8 @@
     }
 
 </script>
+
+  <script src="../js/hamburger.js"></script>
 
 </body>
 </html>

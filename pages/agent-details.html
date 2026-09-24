@@ -756,8 +756,20 @@
             Get In Touch
         </a>
 
-        <button class="menu-toggle" aria-label="Open navigation">
-            <i class="fa-solid fa-bars"></i>
+        <!-- HAMBURGER -->
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="mainNavigation">
+
+            <i
+                class="fa-solid fa-bars"
+                aria-hidden="true">
+            </i>
+
         </button>
 
     </div>
@@ -1651,6 +1663,7 @@ ${message}`;
 
         });
     </script>
+    <script src="../js/hamburger.js"></script>
 
 </body>
 </html>
