@@ -1,0 +1,102 @@
+/* =========================================================
+   HAMBURGER MENU
+========================================================= */
+
+.menu-toggle {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+
+    padding: 8px;
+
+    color: var(--primary);
+
+    font-size: 24px;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1100;
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+@media (max-width: 760px) {
+
+    .menu-toggle {
+        display: flex;
+    }
+
+
+    /*
+       Hide desktop navigation on mobile
+    */
+
+    .navbar {
+        display: none;
+
+        position: absolute;
+
+        top: 82px;
+        left: 0;
+
+        width: 100%;
+
+        background: var(--white);
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        border-top: 1px solid var(--border);
+
+        box-shadow: var(--shadow);
+
+        z-index: 1000;
+    }
+
+
+    /*
+       JavaScript adds .active
+       when hamburger is clicked
+    */
+
+    .navbar.active {
+        display: flex;
+    }
+
+
+    /*
+       Mobile navigation links
+    */
+
+    .navbar a {
+        display: block;
+
+        width: 100%;
+
+        padding: 14px 10px;
+
+        text-decoration: none;
+    }
+
+
+    /*
+       Keep Get In Touch button hidden
+       on mobile because hamburger controls
+       the navigation.
+    */
+
+    .nav-btn {
+        display: none;
+    }
+
+}
